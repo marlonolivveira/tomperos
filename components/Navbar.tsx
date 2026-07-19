@@ -15,10 +15,10 @@ import { whatsappLink, waMessages } from "@/lib/whatsapp";
 const links = [
   { label: "Sobre", href: "#sobre" },
   { label: "Valores", href: "#valores" },
+  { label: "Manifesto", href: "#manifesto" },
   { label: "Temperos", href: "#temperos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Processo", href: "#processo" },
-  { label: "Manifesto", href: "#manifesto" },
 ];
 
 export default function Navbar() {
