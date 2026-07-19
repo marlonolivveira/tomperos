@@ -27,11 +27,11 @@ export default function CtaFinal() {
           className="relative mx-auto max-w-2xl"
         >
           <h2 className="font-display text-4xl leading-[1.04] tracking-tight text-cream sm:text-6xl">
-            Sua cozinha merece tempero de <span className="italic">verdade.</span>
+            Vamos temperar os seus <span className="italic">bons momentos?</span>
           </h2>
           <p className="mx-auto mt-6 max-w-md text-lg text-cream/80">
-            Fala com a gente no WhatsApp e monte seu primeiro pedido. Simples
-            assim.
+            Chama a gente no WhatsApp e monte seu pedido. Do nosso jeito: simples,
+            cuidadoso e com preço justo.
           </p>
           <div className="mt-10 flex flex-wrap items-center justify-center gap-3.5">
             <MagneticButton

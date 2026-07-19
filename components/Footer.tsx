@@ -17,8 +17,8 @@ export default function Footer() {
           <div>
             <Logo tone="cream" />
             <p className="mt-5 max-w-xs text-pretty text-cream/60 leading-relaxed">
-              Temperos e especiarias moídos em pequenos lotes. Do campo direto
-              pro seu pote.
+              Temperos artesanais de qualidade, com apresentação cuidadosa e preço
+              justo, pra levar mais sabor aos momentos que importam.
             </p>
             <div className="mt-6 flex gap-3">
               <a
@@ -87,7 +87,7 @@ export default function Footer() {
 
         <div className="mt-14 flex flex-col gap-3 border-t border-cream/12 pt-7 text-sm text-cream/45 sm:flex-row sm:items-center sm:justify-between">
           <p>© 2026 Tomperos. Todos os direitos reservados.</p>
-          <p className="italic">Feito à mão, como o tempero.</p>
+          <p className="italic">Temperando bons momentos.</p>
         </div>
       </div>
     </footer>

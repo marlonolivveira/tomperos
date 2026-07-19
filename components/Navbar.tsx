@@ -14,9 +14,11 @@ import { whatsappLink, waMessages } from "@/lib/whatsapp";
 
 const links = [
   { label: "Sobre", href: "#sobre" },
+  { label: "Valores", href: "#valores" },
   { label: "Temperos", href: "#temperos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Processo", href: "#processo" },
+  { label: "Manifesto", href: "#manifesto" },
 ];
 
 export default function Navbar() {
@@ -43,7 +45,7 @@ export default function Navbar() {
             <Logo />
           </a>
 
-          <div className="hidden items-center gap-8 lg:flex">
+          <div className="hidden items-center gap-6 lg:flex xl:gap-8">
             {links.map((l) => (
               <a
                 key={l.href}

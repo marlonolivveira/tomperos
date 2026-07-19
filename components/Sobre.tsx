@@ -9,24 +9,24 @@ export default function Sobre() {
       <div className="mx-auto max-w-[1120px] px-5 sm:px-8">
         <Reveal>
           <h2 className="max-w-[16ch] font-display text-4xl leading-[1.05] tracking-tight text-ink sm:text-5xl lg:text-[3.5rem]">
-            Começou porque tempero de mercado não cheirava a{" "}
-            <span className="italic text-paprika">nada.</span>
+            Tempero que aproxima quem senta à{" "}
+            <span className="italic text-paprika">mesa.</span>
           </h2>
         </Reveal>
 
         <div className="mt-8 grid gap-6 sm:grid-cols-2 sm:gap-12">
           <Reveal delay={0.05}>
             <p className="text-pretty text-lg leading-relaxed text-ink/75">
-              A Tomperos nasceu numa cozinha pequena, com um moedor manual e a
-              mania de comprar especiaria boa direto de quem planta. O primeiro
-              lote foi pra família. O segundo, pros vizinhos. Não parou mais.
+              A Tomperos nasceu numa cozinha de família, com um moedor manual e o
+              gosto de comprar especiaria boa direto de quem planta. O primeiro
+              lote foi pra nossa mesa. O segundo, pra dos vizinhos. Não parou mais.
             </p>
           </Reveal>
           <Reveal delay={0.12}>
             <p className="text-pretty text-lg leading-relaxed text-ink/75">
-              Hoje seguimos moendo em pequenos lotes, do nosso jeito: sem
-              conservante, sem pressa e sem esconder o que tem no rótulo. Tempero
-              é memória, e a gente leva isso a sério.
+              Seguimos moendo em pequenos lotes, com apresentação cuidadosa e
+              preço justo. Sem conservante, sem pressa e sem esconder o que tem no
+              rótulo. Porque tempero, pra gente, é memória.
             </p>
           </Reveal>
         </div>

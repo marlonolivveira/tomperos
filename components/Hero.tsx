@@ -69,7 +69,7 @@ export default function Hero() {
             className="mb-5 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.28em] text-cinnamon sm:mb-6"
           >
             <span className="h-px w-8 bg-cinnamon/50" />
-            Temperos artesanais
+            Temperando bons momentos
           </motion.p>
 
           <h1 className="font-display text-[2.3rem] leading-[1.05] tracking-tight text-ink sm:text-6xl sm:leading-[1.02] lg:text-[4.4rem]">

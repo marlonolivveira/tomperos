@@ -23,7 +23,7 @@ npm run build && npm start
 | Onde | O quê |
 | --- | --- |
 | `lib/whatsapp.ts` | **Número do WhatsApp** (hoje é um placeholder `55XXXXXXXXXXX`) e as mensagens prontas dos botões. |
-| `lib/data.ts` | Categorias de temperos, diferenciais, passos do processo, depoimentos, números e nomes do marquee. |
+| `lib/data.ts` | Categorias de temperos, diferenciais, passos do processo, depoimentos, números, nomes do marquee, **valores**, **manifesto** e **slogan** oficiais da marca. |
 | `public/images/` | Fotos das seções e avatares dos depoimentos. |
 | `app/globals.css` | Paleta (tokens de cor), fontes e animações. |
 | `components/Logo.tsx` e `app/icon.svg` | Marca provisória (símbolo + wordmark). Troque quando tiver a logo oficial. |

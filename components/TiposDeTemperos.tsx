@@ -102,7 +102,7 @@ export default function TiposDeTemperos() {
           </p>
           <h2 className="font-display text-4xl leading-[1.06] tracking-tight text-ink sm:text-5xl">
             Seis famílias pra{" "}
-            <span className="italic text-paprika">acordar</span> qualquer prato.
+            <span className="italic text-paprika">realçar</span> qualquer prato.
           </h2>
         </div>
 

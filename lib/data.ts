@@ -13,7 +13,7 @@ export const categorias: Categoria[] = [
     nome: "Pimentas & Picantes",
     cor: "#c1440e",
     imagem: "/images/temperos/pimentas.jpg",
-    descricao: "Calor na medida, do morno ao ardido de respeito.",
+    descricao: "Calor na medida certa, do morno ao picante marcante.",
     exemplos: ["Páprica picante", "Calabresa moída", "Chili em flocos"],
   },
   {
@@ -151,6 +151,50 @@ export const stats: Stat[] = [
   { valor: 9, rotulo: "anos moendo tempero" },
   { valor: 5400, sufixo: "+", rotulo: "cozinhas temperadas" },
 ];
+
+/** Slogan oficial da marca. */
+export const slogan = "Temperando bons momentos.";
+
+export type Valor = { nome: string; texto: string };
+
+export const valores: Valor[] = [
+  {
+    nome: "Fé",
+    texto:
+      "Conduzimos nosso trabalho com gratidão a Deus e buscamos honrá-Lo em tudo o que fazemos.",
+  },
+  { nome: "Honestidade", texto: "Agimos com transparência e respeito em cada relação." },
+  {
+    nome: "Qualidade",
+    texto: "Bons produtos fazem diferença na experiência de quem cozinha.",
+  },
+  { nome: "Cuidado", texto: "Cada detalhe importa, da embalagem ao atendimento." },
+  {
+    nome: "Confiança",
+    texto: "Construímos relações duradouras cumprindo aquilo que prometemos.",
+  },
+  {
+    nome: "Simplicidade",
+    texto: "O essencial, quando bem feito, gera os melhores resultados.",
+  },
+  { nome: "Família", texto: "Valorizamos os momentos vividos ao redor da mesa." },
+  { nome: "Excelência", texto: "Buscamos melhorar continuamente em tudo o que fazemos." },
+];
+
+/** Manifesto da marca (aparece na seção Manifesto). */
+export const manifesto = {
+  lead: "Acreditamos que cozinhar é mais do que preparar uma refeição.",
+  linhas: [
+    "É reunir pessoas.",
+    "É celebrar conquistas.",
+    "É criar memórias.",
+    "É transformar ingredientes em momentos.",
+  ],
+  corpo:
+    "Foi pensando nisso que nasceu a Tomperos. Queremos estar presentes nos almoços de domingo, nos churrascos entre amigos e nas receitas que a família repete de geração em geração.",
+  fecho:
+    "Porque um bom tempero realça o sabor da comida. E os bons momentos dão sabor à vida.",
+};
 
 /** Nomes que rolam no marquee. */
 export const especiarias = [

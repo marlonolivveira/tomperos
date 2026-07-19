@@ -19,9 +19,9 @@ const outfit = Outfit({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://tomperos.com.br"),
-  title: "Tomperos — Temperos artesanais, moídos na hora",
+  title: "Tomperos — Temperando bons momentos",
   description:
-    "Temperos e especiarias artesanais, moídos em pequenos lotes para chegar frescos na sua cozinha. Peça pelo WhatsApp.",
+    "Temperos artesanais de qualidade, com apresentação cuidadosa e preço justo. Feitos para levar mais sabor aos momentos que importam. Peça pelo WhatsApp.",
   keywords: [
     "temperos artesanais",
     "especiarias",
@@ -31,9 +31,9 @@ export const metadata: Metadata = {
     "blends",
   ],
   openGraph: {
-    title: "Tomperos — Temperos artesanais, moídos na hora",
+    title: "Tomperos — Temperando bons momentos",
     description:
-      "Especiarias frescas, sem conservantes, moídas em pequenos lotes. Do campo ao pote.",
+      "Temperos artesanais de qualidade, com apresentação cuidadosa e preço justo.",
     type: "website",
     locale: "pt_BR",
     siteName: "Tomperos",
