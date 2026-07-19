@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <rect width="64" height="64" rx="14" fill="#241811"/>
+  <g transform="translate(32 32)" fill="#c1440e">
+    <g id="p">
+      <ellipse cx="0" cy="-17" rx="5.4" ry="11" fill="#c1440e"/>
+    </g>
+    <use href="#p" transform="rotate(45)"/>
+    <use href="#p" transform="rotate(90)"/>
+    <use href="#p" transform="rotate(135)"/>
+    <use href="#p" transform="rotate(180)"/>
+    <use href="#p" transform="rotate(225)"/>
+    <use href="#p" transform="rotate(270)"/>
+    <use href="#p" transform="rotate(315)"/>
+    <circle cx="0" cy="0" r="7" fill="#e0a526"/>
+  </g>
+</svg>
