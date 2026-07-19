@@ -1,38 +1,38 @@
 type LogoProps = {
   className?: string;
-  /** cor do texto/marca — herda currentColor por padrão */
+  /** cor da estrutura (tigela/socador) — segue o texto; o tempero é fixo */
   tone?: "ink" | "cream";
   markOnly?: boolean;
 };
 
-/** Marca da Tomperos: selo de anis-estrelado + wordmark editorial. */
+/** Marca da Tomperos: pilão (almofariz + socador) com tempero + wordmark. */
 export default function Logo({ className = "", tone = "ink", markOnly = false }: LogoProps) {
-  const petals = [0, 45, 90, 135, 180, 225, 270, 315];
   return (
     <span
       className={`inline-flex items-center gap-2.5 ${
         tone === "cream" ? "text-cream" : "text-ink"
       } ${className}`}
     >
-      <svg
-        viewBox="0 0 64 64"
-        aria-hidden="true"
-        className="h-8 w-8 shrink-0"
-      >
-        <g transform="translate(32 32)">
-          {petals.map((deg) => (
-            <ellipse
-              key={deg}
-              cx="0"
-              cy="-17"
-              rx="5.4"
-              ry="11"
-              fill="var(--color-paprika)"
-              transform={`rotate(${deg})`}
-            />
-          ))}
-          <circle cx="0" cy="0" r="7" fill="var(--color-turmeric)" />
-        </g>
+      <svg viewBox="0 0 64 64" aria-hidden="true" className="h-8 w-8 shrink-0">
+        {/* tigela */}
+        <path
+          d="M13,31 C13,45 21,52 32,52 C43,52 51,45 51,31 Z"
+          fill="currentColor"
+        />
+        {/* tempero */}
+        <ellipse cx="32" cy="31" rx="19" ry="5.2" fill="var(--color-paprika)" />
+        <ellipse cx="32" cy="30.2" rx="9" ry="2.8" fill="var(--color-turmeric)" />
+        {/* socador */}
+        <line
+          x1="34"
+          y1="33"
+          x2="50"
+          y2="12"
+          stroke="currentColor"
+          strokeWidth="7"
+          strokeLinecap="round"
+        />
+        <circle cx="33" cy="32" r="5" fill="currentColor" />
       </svg>
       {!markOnly && (
         <span

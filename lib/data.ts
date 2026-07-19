@@ -2,7 +2,8 @@
 
 export type Categoria = {
   nome: string;
-  cor: string; // cor da própria especiaria (usada no "monte" de tempero)
+  cor: string; // cor da própria especiaria (brilho no hover do card)
+  imagem: string;
   descricao: string;
   exemplos: string[];
 };
@@ -11,36 +12,42 @@ export const categorias: Categoria[] = [
   {
     nome: "Pimentas & Picantes",
     cor: "#c1440e",
+    imagem: "/images/temperos/pimentas.jpg",
     descricao: "Calor na medida, do morno ao ardido de respeito.",
     exemplos: ["Páprica picante", "Calabresa moída", "Chili em flocos"],
   },
   {
     nome: "Amarelos & Dourados",
     cor: "#e0a526",
+    imagem: "/images/temperos/amarelos.jpg",
     descricao: "Cor de sol e sabor terroso que tinge o prato.",
     exemplos: ["Cúrcuma", "Mostarda em pó", "Gengibre"],
   },
   {
     nome: "Ervas Frescas",
     cor: "#5f6b43",
+    imagem: "/images/temperos/ervas.jpg",
     descricao: "Secas com cuidado para guardar o verde e o perfume.",
     exemplos: ["Orégano", "Alecrim", "Manjericão"],
   },
   {
     nome: "Doces & Aromáticos",
     cor: "#7b3f00",
+    imagem: "/images/temperos/doces.jpg",
     descricao: "Aquele cheirinho de tacho quente e afeto.",
     exemplos: ["Canela em pó", "Cravo", "Noz-moscada"],
   },
   {
     nome: "Terrosos & Quentes",
     cor: "#a9713a",
+    imagem: "/images/temperos/terrosos.jpg",
     descricao: "A base fundo de panela de toda boa comida.",
     exemplos: ["Cominho", "Coentro em pó", "Curry da casa"],
   },
   {
     nome: "Blends da Casa",
     cor: "#a8551f",
+    imagem: "/images/temperos/blends.jpg",
     descricao: "Receitas nossas, moídas e medidas à mão.",
     exemplos: ["Tempero baiano", "Chimichurri", "Garam masala"],
   },

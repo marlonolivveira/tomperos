@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useRef, type MouseEvent } from "react";
 import { motion, useMotionValue, useSpring, useReducedMotion } from "motion/react";
 import { ArrowUpRight } from "@phosphor-icons/react";
@@ -33,51 +34,59 @@ function TiltCard({ cat, index }: { cat: Categoria; index: number }) {
       rel="noopener noreferrer"
       onMouseMove={move}
       onMouseLeave={leave}
-      initial={reduce ? false : { opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
-      transition={{ duration: 0.6, delay: (index % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: reduce ? 0 : 0.6, delay: reduce ? 0 : (index % 3) * 0.08, ease: [0.16, 1, 0.3, 1] }}
       style={{
         transformPerspective: 900,
         rotateX: srx,
         rotateY: sry,
         ["--glow" as string]: `${cat.cor}66`,
       }}
-      className={`group relative flex flex-col overflow-hidden rounded-[22px] border border-ink/10 bg-sand/50 p-7 transition-shadow duration-500 hover:shadow-[0_28px_60px_-30px_var(--glow)] ${
+      className={`group relative flex flex-col overflow-hidden rounded-[22px] border border-ink/10 bg-sand/50 transition-shadow duration-500 hover:shadow-[0_28px_60px_-30px_var(--glow)] ${
         index % 2 === 1 ? "lg:translate-y-9" : ""
       }`}
     >
-      {/* brilho na cor da especiaria */}
-      <div
-        aria-hidden
-        className="pointer-events-none absolute -inset-px opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-        style={{
-          background: `radial-gradient(80% 60% at 50% 0%, ${cat.cor}22, transparent 70%)`,
-        }}
-      />
-
-      <div className="relative mb-6 h-16 w-16 overflow-hidden rounded-full ring-1 ring-black/10">
-        <div className="spice-mound absolute inset-0" style={{ ["--mound" as string]: cat.cor }} />
+      {/* foto do tempero */}
+      <div className="relative aspect-[16/10] overflow-hidden">
+        <Image
+          src={cat.imagem}
+          alt={`${cat.nome} — ${cat.exemplos.join(", ")}`}
+          fill
+          sizes="(max-width: 640px) 92vw, (max-width: 1024px) 46vw, 380px"
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
+        />
+        {/* brilho na cor da especiaria no hover */}
+        <div
+          aria-hidden
+          className="pointer-events-none absolute inset-0 opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+          style={{
+            background: `linear-gradient(to top, ${cat.cor}59, transparent 60%)`,
+          }}
+        />
       </div>
 
-      <h3 className="font-display text-2xl text-ink">{cat.nome}</h3>
-      <p className="mt-2 text-[0.98rem] leading-relaxed text-ink/65">{cat.descricao}</p>
+      <div className="flex flex-1 flex-col p-7">
+        <h3 className="font-display text-2xl text-ink">{cat.nome}</h3>
+        <p className="mt-2 text-[0.98rem] leading-relaxed text-ink/65">{cat.descricao}</p>
 
-      <div className="mt-5 flex flex-wrap gap-2">
-        {cat.exemplos.map((e) => (
-          <span
-            key={e}
-            className="rounded-full border border-ink/12 bg-cream/70 px-3 py-1 text-[0.78rem] text-ink/70"
-          >
-            {e}
-          </span>
-        ))}
+        <div className="mt-5 flex flex-wrap gap-2">
+          {cat.exemplos.map((e) => (
+            <span
+              key={e}
+              className="rounded-full border border-ink/12 bg-cream/70 px-3 py-1 text-[0.78rem] text-ink/70"
+            >
+              {e}
+            </span>
+          ))}
+        </div>
+
+        <span className="mt-6 inline-flex items-center gap-1 text-[0.9rem] font-medium text-ink/60 transition-colors group-hover:text-paprika">
+          Pedir no WhatsApp
+          <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+        </span>
       </div>
-
-      <span className="mt-6 inline-flex items-center gap-1 text-[0.9rem] font-medium text-ink/60 transition-colors group-hover:text-paprika">
-        Pedir no WhatsApp
-        <ArrowUpRight size={16} className="transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-      </span>
     </motion.a>
   );
 }

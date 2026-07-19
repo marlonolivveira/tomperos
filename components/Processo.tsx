@@ -21,10 +21,10 @@ export default function Processo() {
           Do campo ao pote
         </p>
         <motion.h2
-          initial={reduce ? false : { opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.5 }}
-          transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: reduce ? 0 : 0.7, ease: [0.16, 1, 0.3, 1] }}
           className="max-w-[18ch] font-display text-4xl leading-[1.06] tracking-tight text-cream sm:text-5xl"
         >
           Quatro passos, nenhum{" "}
@@ -48,7 +48,7 @@ export default function Processo() {
           <div className="absolute left-[13px] top-1 h-[calc(100%-1rem)] w-px bg-cream/15 sm:left-[21px]" />
           {/* trilho preenchido pelo scroll */}
           <motion.div
-            style={{ scaleY: reduce ? 1 : scrollYProgress }}
+            style={{ scaleY: scrollYProgress }}
             className="absolute left-[13px] top-1 h-[calc(100%-1rem)] w-px origin-top bg-gradient-to-b from-turmeric to-paprika sm:left-[21px]"
           />
 
@@ -56,10 +56,10 @@ export default function Processo() {
             {processo.map((p, i) => (
               <motion.div
                 key={p.numero}
-                initial={reduce ? false : { opacity: 0, x: 18 }}
+                initial={{ opacity: 0, x: 18 }}
                 whileInView={{ opacity: 1, x: 0 }}
                 viewport={{ once: true, amount: 0.6 }}
-                transition={{ duration: 0.6, delay: 0.05, ease: [0.16, 1, 0.3, 1] }}
+                transition={{ duration: reduce ? 0 : 0.6, delay: reduce ? 0 : 0.05, ease: [0.16, 1, 0.3, 1] }}
                 className="relative"
               >
                 <span className="absolute -left-10 top-1 grid h-7 w-7 place-items-center rounded-full bg-paprika text-[0.7rem] font-semibold text-cream ring-4 ring-cocoa sm:-left-14 sm:h-9 sm:w-9 sm:text-xs">

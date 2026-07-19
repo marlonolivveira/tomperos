@@ -24,19 +24,6 @@ export default function SplitText({
   const words = text.split(" ");
   const emph = new Set(emphasize.map((w) => w.toLowerCase()));
 
-  if (reduce) {
-    return (
-      <span className={className}>
-        {words.map((w, i) => (
-          <span key={i} className={emph.has(w.toLowerCase()) ? "italic text-paprika" : ""}>
-            {w}
-            {i < words.length - 1 ? " " : ""}
-          </span>
-        ))}
-      </span>
-    );
-  }
-
   return (
     <span className={className}>
       {words.map((word, i) => (
@@ -52,8 +39,8 @@ export default function SplitText({
             initial={{ y: "110%" }}
             animate={{ y: "0%" }}
             transition={{
-              duration: 0.9,
-              delay: delay + i * 0.075,
+              duration: reduce ? 0 : 0.9,
+              delay: reduce ? 0 : delay + i * 0.075,
               ease: [0.16, 1, 0.3, 1],
             }}
           >

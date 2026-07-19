@@ -26,7 +26,9 @@ npm run build && npm start
 | `lib/data.ts` | Categorias de temperos, diferenciais, passos do processo, depoimentos, números e nomes do marquee. |
 | `public/images/` | Fotos das seções e avatares dos depoimentos. |
 | `app/globals.css` | Paleta (tokens de cor), fontes e animações. |
-| `components/Logo.tsx` e `app/icon.svg` | Marca provisória (anis-estrelado + wordmark). Troque quando tiver a logo oficial. |
+| `components/Logo.tsx` e `app/icon.svg` | Marca provisória (símbolo + wordmark). Troque quando tiver a logo oficial. |
+| `public/brand/` | **Logo temporária** em SVG pronta pra usar: `tomperos-lockup.svg` (fundo claro), `tomperos-lockup-cream.svg` (fundo escuro), `tomperos-seal.svg` (selo/carimbo pra rótulo de pote) e `tomperos-mark.svg` (só o símbolo). |
+| `components/ui/SpiceField.tsx` | Animação interativa de "poeira de tempero" do hero (canvas). Reage ao cursor e respeita `prefers-reduced-motion`. |
 
 ## Estrutura
 
@@ -37,7 +39,11 @@ npm run build && npm start
 
 ## Observações
 
-- As fotos são de banco de imagens (Unsplash) baixadas em `public/`. Troque
-  pelas fotos reais dos seus produtos quando tiver.
+- As fotos das seções são de banco de imagens (Unsplash) baixadas em `public/`.
+  As fotos dos cards de temperos (`public/images/temperos/`) vêm do Wikimedia
+  Commons (licença livre, podem pedir crédito ao autor). O ideal é trocar todas
+  pelas **fotos reais dos seus produtos** quando tiver — é só substituir os
+  arquivos mantendo os mesmos nomes (`pimentas.jpg`, `amarelos.jpg`, `ervas.jpg`,
+  `doces.jpg`, `terrosos.jpg`, `blends.jpg`).
 - Os depoimentos e números são fictícios (placeholder) — ajuste em `lib/data.ts`.
 - Todas as animações respeitam `prefers-reduced-motion`.

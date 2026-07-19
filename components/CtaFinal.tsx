@@ -20,10 +20,10 @@ export default function CtaFinal() {
         <SpiceParticles className="opacity-70" />
 
         <motion.div
-          initial={reduce ? false : { opacity: 0, y: 24 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, amount: 0.4 }}
-          transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: reduce ? 0 : 0.8, ease: [0.16, 1, 0.3, 1] }}
           className="relative mx-auto max-w-2xl"
         >
           <h2 className="font-display text-4xl leading-[1.04] tracking-tight text-cream sm:text-6xl">
