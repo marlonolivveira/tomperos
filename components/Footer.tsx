@@ -4,9 +4,11 @@ import { whatsappLink, waMessages } from "@/lib/whatsapp";
 
 const nav = [
   { label: "Sobre", href: "#sobre" },
+  { label: "Valores", href: "#valores" },
   { label: "Temperos", href: "#temperos" },
   { label: "Diferenciais", href: "#diferenciais" },
   { label: "Processo", href: "#processo" },
+  { label: "Manifesto", href: "#manifesto" },
 ];
 
 export default function Footer() {
@@ -31,7 +33,7 @@ export default function Footer() {
                 <WhatsappLogo weight="fill" size={19} />
               </a>
               <a
-                href="https://instagram.com"
+                href="https://instagram.com/tomperos.oficial"
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Instagram"
@@ -80,7 +82,7 @@ export default function Footer() {
                   contato@tomperos.com.br
                 </a>
               </li>
-              <li>@tomperos</li>
+              <li>@tomperos.oficial</li>
             </ul>
           </div>
         </div>
